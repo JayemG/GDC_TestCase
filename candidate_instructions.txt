@@ -1,0 +1,75 @@
+# Data Engineer/Analyst Test
+
+Thanks a lot for applying to our Data Analyst position at GensDeConfiance!
+We're super excited to learn more about your profile and background.
+
+To help us understand how you work, we have put together this test. It involves
+working with some sample data that could be coming from our website. The data
+you'll be playing with is randomly generated - it does not come from our
+production database.
+
+The test goes along two dimensions:
+
+1. Data engineering: clean up the data and make it available for querying.
+2. Data analyst: gather some analysis from the data.
+
+Out of respect for your time, you don't need to spend more than three hours on
+it. You are free to spend more time if you want, but in that case, please let
+us know. If there are things you would have done if you had had more time,
+please include them in your `README`.
+
+If you have open-source code that you want us to look at instead of this
+exercise, feel free to let us know!
+
+# Instructions
+
+1. Download the `.csv` attached.
+2. Write a script that imports the `.csv` data into a SQL
+   database. You are free to choose whichever SQL database technology you want,
+   but please justify it. Please also include instructions about how to deploy
+   it locally (e.g., with Docker). Assume that the users are on a Mac Os or
+   Linux environment.
+3. Write a report for our product team. The report should layout business and
+   product conclusions that you can infer from the dataset. From your previous conclusions, 
+   which product feature would  you suggest to improve GDC?
+4. Include a `README` that details your process and the technical decisions you
+   made along the way. This file must include some of yours SQL requests.
+5. Send us your work, preferably under the form of a shared git repository.
+
+As for the technologies, you can pick whatever language is best suited for the
+task, although we would appreciate it if you chose a commonly used data science
+language such as Python.
+
+The report, the code comments, the README and the documentation should all be
+in English. Don't forget to proofread yourself!
+
+## How we review
+
+It is fine to focus on the data analysis part of the exercise and keep the
+data engineering part shorter and simpler.
+
+This is a simple test. Show us how well you can execute it!
+
+### Data engineering
+
+The data import script is simple, but please make it **production-ready**
+(however you define it) and write it as if it was going to be heavily used and
+improved. If you don't consider it production-ready yet, explain why.
+Correctness is only one of the aspects we have a look at.
+
+If you have to choose between quality and exhaustiveness, choose quality as
+this will give us better insights into your skills.
+
+
+### Data Analysis
+
+- Is the analysis non-obvious and useful?
+- Is the analysis clear and well-communicated?
+- Are there some product and business conclusions included?
+- Readability: quality of the included graph(s), conciseness, layout,
+  typography
+
+## Need help?
+
+If anything's unclear, do feel free to reach out! We'd be delighted to help
+you.
