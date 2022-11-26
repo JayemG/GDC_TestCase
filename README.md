@@ -120,7 +120,7 @@ WHERE city='';
 ```
 
 ### Table ads :
--- Check if 1st and past column identical, Make 1st column the id column
+-- Check if 1st and last column identical, Make 1st column the id column
 ```
 SELECT AA, id
 from ads
