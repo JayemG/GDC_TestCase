@@ -55,12 +55,14 @@ https://dbeaver.io/
 ### Uploading the tables...
 
 --Create DB
+```
 CREATE DATABASE GDC_TestCase1 ;
 
 USE GDC_TestCase1 ;
-
+```
 
 --Create Table
+```
 CREATE TABLE ads (
 	AA INTEGER,
 	owner_id INTEGER,
@@ -73,9 +75,11 @@ CREATE TABLE ads (
 	id INTEGER,
 	PRIMARY KEY (id)
 );
+```
 
 
 -- Import data from csv file
+```
 LOAD DATA INFILE 'C:/Users/xavir/Documents/GDC_TestCase/ads.csv' 
 INTO TABLE GDC_TestCase1.ads
 FIELDS
@@ -83,14 +87,15 @@ FIELDS
   ENCLOSED BY '"'
   LINES TERMINATED BY '\n'
 IGNORE 1 ROWS (AA,owner_id,title,category,price,city,created_at,deleted_at,id);
-
+```
 
 ### ... But also linking the tables.
 
 -- Add Foreign Keys once all the tables are set
+```
 ALTER TABLE referrals  
 ADD FOREIGN KEY (referrer_user_id) REFERENCES users(id);
-
+```
 
 
 ## --- IV. First treatement : in SQL ---
@@ -100,7 +105,7 @@ While the previous chapter is generic enough to apply to all .csv files, I did m
 ### All tables :
 
 -- Set Nulls
-
+```
 UPDATE users
 SET age=NULL
 WHERE age='0';
@@ -112,10 +117,11 @@ WHERE birthdate='0000-00-00';
 UPDATE users
 SET city=NULL
 WHERE city='';
-
+```
 
 ### Table ads :
 -- Check if 1st and past column identical, Make 1st column the id column
+```
 SELECT AA, id
 from ads
 WHERE AA <> id ;
@@ -125,8 +131,10 @@ DROP id;
 
 ALTER TABLE ads
 RENAME COLUMN AA TO id ;
+```
 
 -- Standardize fields
+```
 SELECT DISTINCT category
 FROM ads;
 
@@ -139,7 +147,7 @@ SET category_clean = CASE
   WHEN category = 'realestate' OR category = 'REAL_ESTATE' OR category = 'relestate' THEN 'real_estate'
   ELSE null
 END ;
-
+```
 
 ## --- V. First analysis : in SQL ---
 
@@ -168,7 +176,7 @@ created_at : 0 NULL, 972 distinct
 deleted_at : ALL NULL
   !! Why none deleted?
 
-### ads_transactions
+### ads_transaction
 6 645 rows
 id : 6 645 distinct
   !! No errors here
@@ -179,7 +187,7 @@ sold_price : 0 null, 6 645 distinct
 created_at : 0 null, 999 distinct
   !! Hehe :D 
 
-ad_owner_id = buyer_user_id : 
+ad_owner_id = buyer_user_id : 0
 
 
 ### Users
@@ -203,8 +211,8 @@ firstname : 0 null
 lastname : 0 null
 user_agent : 0 null
 misc : 0 null
-
-	!! deleted? add field deleted_at DATE (for tracking interest and usage)
+  
+!! deleted? add field deleted_at DATE (for tracking interest and usage)
 
 
 ### Referals
