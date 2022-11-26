@@ -156,75 +156,75 @@ They contain remarks as to what to look further into, questions that arose, and 
 NB : some remarks are quite obvious, maybe even unnecessary. I just wanted to lay out my whole process.
 
 ### Ads : 
-40 000 rows
-id : 40 000 distinct
-  !! No errors here
-owner_id : 2 '0', 14 313 distinct
+- 40 000 rows
+- id : 40 000 distinct
+ 	!! No errors here
+- owner_id : 2 '0', 14 313 distinct
 	!!  '0' is normal.
-title : 0 NULL, 39 distinct
+- title : 0 NULL, 39 distinct
 	!! 39 for 40 000 rows : So Selection from a list. 
-  !! Check if fields clean. 
-  !! Check in list clean. 
-category : 0 NULL, 4 distinct
+ 	!! Check if fields clean. 
+ 	!! Check in list clean. 
+- category : 0 NULL, 4 distinct
 	!! 3 real estate poorly orthographied. How did that happen? (Historical? other?)
-  !! Why only 2 categories (once cleaned) ? 2 existing? Or others poorly advertised or accessible?
-price : 0 NULL, 21 135 distinct
-city : 0 NULL, 6 561 distinct
-  !! Check if clean
-created_at : 0 NULL, 972 distinct
-  !! If it was the full DB, it would be a 3-4 years old product
-deleted_at : ALL NULL
-  !! Why none deleted?
+ 	!! Why only 2 categories (once cleaned) ? 2 existing? Or others poorly advertised or accessible?
+- price : 0 NULL, 21 135 distinct
+- city : 0 NULL, 6 561 distinct
+ 	!! Check if clean
+- created_at : 0 NULL, 972 distinct
+	!! If it was the full DB, it would be a 3-4 years old product
+- deleted_at : ALL NULL
+ 	!! Why none deleted?
 
 ### ads_transaction
-6 645 rows
-id : 6 645 distinct
+- 6 645 rows
+- id : 6 645 distinct
   !! No errors here
-ad_owner_id : 0 null, 5 361 distinct
-buyer_user_id : 0 null, 6 645 distinct
-ad_id : 0 null, 6 645 distinct
-sold_price : 0 null, 6 645 distinct
-created_at : 0 null, 999 distinct
+- ad_owner_id : 0 null, 5 361 distinct
+- buyer_user_id : 0 null, 6 645 distinct
+- ad_id : 0 null, 6 645 distinct
+- sold_price : 0 null, 6 645 distinct
+- created_at : 0 null, 999 distinct
   !! Hehe :D 
 
-ad_owner_id = buyer_user_id : 0
+- ad_owner_id = buyer_user_id : 0
 
 
 ### Users
-30 000 rows
-age : 0 null
-bday : 0 null
-city : 0 null
-created_at : 0 null
-sex: 3052 null ; F,M, M., Mr
+- 30 000 rows
+- age : 0 null
+- bday : 0 null
+- city : 0 null
+- created_at : 0 null
+- sex: 3052 null ; F,M, M., Mr
 	!! do we want it compulsory? why do we even want it at all?
 	!! Block keybord entries : list (if we keep)
-lat : 6000 null
-lon : 6000 null
-password : 12 nulls 2017-2020
+- lat : 6000 null
+- lon : 6000 null
+- password : 12 nulls 2017-2020
 	!! Find where it comes from. Contact them or delete them.
   !! Block creation of account without passport
-utm_source : 5985 null ; fb, mailing
-utm_medium : 6966 null ; ad, email, social
-utm_campaign : 5942 null
-firstname : 0 null
-lastname : 0 null
-user_agent : 0 null
-misc : 0 null
+- utm_source : 5985 null ; fb, mailing
+- utm_medium : 6966 null ; ad, email, social
+- utm_campaign : 5942 null
+- firstname : 0 null
+- lastname : 0 null
+- user_agent : 0 null
+- misc : 0 null
   
-!! deleted? add field deleted_at DATE (for tracking interest and usage)
+- !! deleted? add field deleted_at DATE (for tracking interest and usage)
 
 
 ### Referals
-303 958 rows
-id : 303 958 distinct
-referrer_user_id : 0 null, 23 543 distinct
-referree_user_id : 0 null, 23 523 distinct
-created_at : 0 null
-deleted_at : All null
+- 303 958 rows
+- id : 303 958 distinct
+- referrer_user_id : 0 null, 23 543 distinct
+- referree_user_id : 0 null, 23 523 distinct
+- created_at : 0 null
+- deleted_at : All null
   !! Odd
 
-referrer_user_id=referree_user_id = 40
+- referrer_user_id=referree_user_id = 40
 	!! Look into how it is possible. Make sure it gets blocked.
 
 
