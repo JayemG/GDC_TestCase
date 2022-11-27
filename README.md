@@ -232,8 +232,15 @@ NB : some remarks are quite obvious, maybe even unnecessary. I just wanted to la
 
 
 
-## --- VI. Analysis in Python : Anaconda ---
+## --- VI. Analysis in Python : Google Collab ---
 
+### Export files in .csv files.
+```
+SELECT * INTO OUTFILE 'C:/Users/xavir/Documents/GDC_TestCase/Clean/users_clean.csv'
+  FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
+  LINES TERMINATED BY '\n'
+  FROM users;
+```
 
 ## --- VII. Business and product conclusions ---
 
