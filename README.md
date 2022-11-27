@@ -63,6 +63,9 @@ USE GDC_TestCase1 ;
 
 --Create Table
 ```
+SET sql_mode = '';
+SET sql_mode = 'IGNORE_SPACE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+
 CREATE TABLE ads (
 	AA INTEGER,
 	owner_id INTEGER,
