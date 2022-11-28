@@ -175,7 +175,7 @@ NB : some remarks are quite obvious, maybe even unnecessary. I just wanted to la
 - city : 0 NULL, 6 561 distinct
  	!! Check if clean
 - created_at : 0 NULL, 972 distinct
-	!! If it was the full DB, it would be a 3-4 years old product
+	!! If it was the full DB, it would be a 3-4 years old product. Checks out with the dates (2016-2020)
 - deleted_at : ALL NULL
  	!! Why none deleted?
 
@@ -232,19 +232,84 @@ NB : some remarks are quite obvious, maybe even unnecessary. I just wanted to la
 
 
 
-## --- VI. Analysis in Python : Google Collab ---
+## --- VI. Data Analysis 
+For this part of the case, I chose to use a tool I am really comfortable with. 
+In this way you will be able to see what I can achieve with a software I have been using for a while, which I will be able to do with whatever tools you are using, given a little time to get into it.
 
-### Export files in .csv files.
-```
-SELECT * INTO OUTFILE 'C:/Users/xavir/Documents/GDC_TestCase/Clean/users_clean.csv'
-  FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
-  LINES TERMINATED BY '\n'
-  FROM users;
-```
+You can see the visual analysis here :
+https://github.com/JayemG/GDC_TestCase/blob/main/Data%20Analysis.pdf
+
+
+Here are summed up my observations, and **what I would have like to look into, given more time.**
+
+### Overview :
+- A third of the users are not active. We can see that you can vouch for people without being active.
+- A good proportion of users are referrers. That seems to work well.
+- When you take the inactive users out of the count, users without ad go from 52% to 43%.  Still a lot and worth looking into.
+- When you take the inactive users out of the count, users who never did a purchase go from 80% to 74%.  
+- The distribution by age does not change sensibly.
+- In 4 years, only 2.8 ads per user who actually posted an ad is quite low. 
+- The conversion rates of the ads is extremely low : less than 1 on 5. 
+- I looked into the ages relative to type of activity, and we can see that : 
+		- for selling it's more the "over 30 yo"
+		- for buying it's more evenly distributed, with a peak over 50 yo.
+		- and those most active in both at once are between 40 and 50 yo.
+
+- **Why is the conversion rate of the ads so low? Can it be boosted?**
+- **Look into how to appeal to the half of the users with no ads whatsoever?**
+- **How to appeal to the younger generations?**
+- **Is referral an issue?**
+
+### Users :
+- No marked evolution as to ages at time of subscription or ages of users over time, nor of the proportion of women relative to men.
+- Twice as many women as men. 
+- Most women are over 50 yo. Type of items : half and half (unrealistic : made-up data). Evolution of subscription and their origins? Too clean.
+
+- **I would like to look into what appeals to younger generations, as they are fewer in numbers.**
+- **Proportion of women : Reasons? Maybe what attracts them could be used in ad campaign to attract a wider public?**
+- **Women over 50 : Cities or countryside? Why no more ads after 2019?**
+- **Add a map of the activity, overall and by category, and by year, and maybe by year/category if it feels relevant after a first enquiry.**
+
+### Referrals :
+- The seniority shows that all referrals have been made during the same year and month.  
+- The “Status” graph shines a light on how difficult it is to climb that ladder.
+
+- **Is the yearmonth of the referrals date a bug?**
+- **Look into the average seniority of each status. And for each sub-category (see here ) too.**
+- **Has it been set randomly? If not, how?**
+
+### Other :
+- **Count number of connexions and analyse patterns of behaviour based on them (number of ads, purchases, referrals around those dates)*
+
 
 ## --- VII. Business and product conclusions ---
 
+The product exists since 2016, but it really took off in 2017 and interest has been stable until 2020.
+All subscriptions, ads etc stopped around april 2020. Either it was closed, or the Covid restrictions had a big impact on it.
+The referral system works well. The status system is too hard to be truly enticing.
+It attracts a lot of middle-aged women. And overall twice as many women as men. Probably the sense of safety that comes with the vouching system, but maybe something else too : women are notoriously good at networking in a way that is relevant to this product.
+There is about twice as many users over 50 than under 50. If we want it to have a long life, we need to work on making it more attractive to the younger generations.
+
 
 ## --- VIII. Conclusion : Suggestions for improvements ---
+
+**Technicalities :
+- Make password compulsory.
+- Make gender compulsory, from list. Add a "Non binary".
+- Delete self-referees. Make it impossible.
+- Make city names as list. Add Lat and Lon automatically.
+- Add an automatic deletion of ads.
+- Block accents from first and last names.
+
+
+**Product quality :
+- Add more categories.
+- Use last suggestion (pattern of behaviour based on dates and numbers of connexion) to make the product more user-friendly. (Shortcuts to most used features, what feature is accessible from which page...)
+- Assess what makes it enticing to people under 50 yo, and act on it. Can be crossed with the previous point. Cand be built on from Women over 50 analysis.
+
+
+
+
+
 
 
