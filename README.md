@@ -233,7 +233,7 @@ NB : some remarks are quite obvious, maybe even unnecessary. I just wanted to la
 
 
 ## --- VI. Data Analysis 
-For this part of the case, I chose to use a tool I am really comfortable with. 
+For this part of the case, I chose to use a tool I am really comfortable with : MyReport (Data and Page).
 In this way you will be able to see what I can achieve with a software I have been using for a while, which I will be able to do with whatever tools you are using, given a little time to get into it.
 
 You can see the visual analysis here :
@@ -251,9 +251,9 @@ Here are summed up my observations, and **what I would have like to look into, g
 - In 4 years, only 2.8 ads per user who actually posted an ad is quite low. 
 - The conversion rates of the ads is extremely low : less than 1 on 5. 
 - I looked into the ages relative to type of activity, and we can see that : 
-		- for selling it's more the "over 30 yo"
-		- for buying it's more evenly distributed, with a peak over 50 yo.
-		- and those most active in both at once are between 40 and 50 yo.
+		1/ for selling it's more the "over 30 yo"
+		2/ for buying it's more evenly distributed, with a peak over 50 yo.
+		3/ and those most active in both at once are between 40 and 50 yo.
 
 - **Why is the conversion rate of the ads so low? Can it be boosted?**
 - **Look into how to appeal to the half of the users with no ads whatsoever?**
@@ -279,7 +279,7 @@ Here are summed up my observations, and **what I would have like to look into, g
 - **Has it been set randomly? If not, how?**
 
 ### Other :
-- **Count number of connexions and analyse patterns of behaviour based on them (number of ads, purchases, referrals around those dates)*
+- **Count number of connexions and analyse patterns of behaviour based on them (number of ads, purchases, referrals around those dates)**
 
 
 ## --- VII. Business and product conclusions ---
@@ -293,7 +293,7 @@ There is about twice as many users over 50 than under 50. If we want it to have 
 
 ## --- VIII. Conclusion : Suggestions for improvements ---
 
-**Technicalities :
+**Technicalities :**
 - Make password compulsory.
 - Make gender compulsory, from list. Add a "Non binary".
 - Delete self-referees. Make it impossible.
@@ -302,7 +302,7 @@ There is about twice as many users over 50 than under 50. If we want it to have 
 - Block accents from first and last names.
 
 
-**Product quality :
+**Product quality :**
 - Add more categories.
 - Use last suggestion (pattern of behaviour based on dates and numbers of connexion) to make the product more user-friendly. (Shortcuts to most used features, what feature is accessible from which page...)
 - Assess what makes it enticing to people under 50 yo, and act on it. Can be crossed with the previous point. Cand be built on from Women over 50 analysis.
