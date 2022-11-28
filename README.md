@@ -232,7 +232,7 @@ NB : some remarks are quite obvious, maybe even unnecessary. I just wanted to la
 
 
 
-## --- VI. Data Analysis 
+## --- VI. Data Analysis ---
 For this part of the case, I chose to use a tool I am really comfortable with : MyReport (Data and Page).
 In this way you will be able to see what I can achieve with a software I have been using for a while, which I will be able to do with whatever tools you are using, given a little time to get into it.
 
